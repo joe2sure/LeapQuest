@@ -1,4 +1,14 @@
 class GameConfig {
+  static const Map<String, double> difficultySettings = {
+    'Easy': 1.0,
+    'Normal': 1.5,
+    'Hard': 2.0,
+    'Legendary': 3.0,
+  };
+
+static const double initialEnemySpawnChance = 0.03;
+static const double maxEnemySpawnChance = 0.15;
+
   // Game physics
   static const double gravity = 0.5;
   static const double jumpForce = -15.0;

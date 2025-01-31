@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:leap_quest/config/config.dart';
 import 'package:leap_quest/providers/setting_provider.dart';
 import 'package:provider/provider.dart';
 import 'package:leap_quest/config/colors.dart';
@@ -11,7 +12,10 @@ class SettingsScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: GameColors.background,
       appBar: AppBar(
-        title: Text('Settings'),
+        title: Text(
+          'Settings',
+          style: TextStyle(fontSize: 16, color: Colors.white),
+        ),
         backgroundColor: GameColors.primary,
       ),
       body: Padding(
@@ -19,6 +23,45 @@ class SettingsScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            Text(
+              'How to Play',
+              style: TextStyle(
+                fontSize: 24,
+                fontWeight: FontWeight.bold,
+                color: Colors.white
+              ),
+            ),
+            SizedBox(height: 16),
+            Text(
+              '1. Tap the screen to make the ball jump.\n'
+              '2. Land on platforms to score points.\n'
+              '3. Avoid falling off the screen.\n'
+              '4. Collect power-ups for special abilities.',
+              style: TextStyle(fontSize: 16, color: Colors.white),
+            ),
+            SizedBox(height: 16),
+            Text(
+              'Difficulty',
+              style: TextStyle(
+                fontSize: 24,
+                fontWeight: FontWeight.bold,
+                color: Colors.white
+              ),
+            ),
+            DropdownButton<String>(
+              value: 'Normal',
+              dropdownColor: Colors.white,
+              items: GameConfig.difficultySettings.keys.map((String value) {
+                return DropdownMenuItem<String>(
+                  value: value,
+                  child: Text(value, selectionColor: Colors.white,),
+                );
+              }).toList(),
+              onChanged: (value) {
+                // Update difficulty
+              },
+            ),
+            SizedBox(height: 16),
             Text(
               'Audio Settings',
               style: TextStyle(
