@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:leap_quest/providers/game_provider.dart';
 
 class PauseMenu extends StatelessWidget {
   @override

@@ -3,10 +3,12 @@ import 'package:audioplayers/audioplayers.dart';
 class AudioService {
   static final AudioService _instance = AudioService._internal();
   factory AudioService() => _instance;
-  
+
   final AudioPlayer _audioPlayer = AudioPlayer();
   double _volume = 1.0;
   bool _isMuted = false;
+
+  AudioService._internal();
 
   Future<void> playJump() async {
     if (!_isMuted) {

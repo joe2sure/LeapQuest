@@ -1,5 +1,6 @@
 import 'package:flame/components.dart';
 import 'package:flutter/material.dart';
+import 'package:leap_quest/config/config.dart';
 
 class Player extends PositionComponent {
   final Paint _paint;

@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:leap_quest/providers/game_provider.dart';
 
 class GameHUD extends StatelessWidget {
   @override
@@ -15,7 +17,7 @@ class GameHUD extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
-                  'Score: ${gameProvider.score.toInt()}',
+                  'Score: ${gameProvider.score}',
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 24,
