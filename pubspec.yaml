@@ -1,0 +1,63 @@
+name: leap_quest
+description: "A new Flutter project."
+# The following line prevents the package from being accidentally published to
+# pub.dev using `flutter pub publish`. This is preferred for private packages.
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.6.0
+
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flame: ^1.8.0
+  provider: ^6.0.5
+  shared_preferences: ^2.2.0
+  audioplayers: ^5.0.0
+  google_fonts: ^5.1.0
+
+
+  cupertino_icons: ^1.0.8
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+
+
+  flutter_lints: ^5.0.0
+
+
+flutter:
+
+
+  uses-material-design: true
+
+  # To add assets to your application, add an assets section, like this:
+  assets:
+    - assets/audio/player/game_over_sound/
+    - assets/audio/player/jump_sound/
+    - assets/audio/player/landing_sound/
+    - assets/audio/player/power_up_sound/
+    - assets/audio/background/chill_mode/
+    - assets/audio/background/energetic_sound/
+    - assets/audio/environment/ambient_bg_noise/
+    - assets/audio/environment/wind_effect/
+    - assets/audio/ui/button_click/
+    - assets/audio/ui/start_game_sound/
+
+
+  fonts:
+    - family: Game Over
+      fonts:
+        - asset: assets/fonts/game_over.ttf
+    - family: Game glm
+      fonts:
+        - asset: assets/fonts/GAME_glm.ttf
+    - family: Game Play
+      fonts:
+        - asset: assets/fonts/Gameplay.ttf
