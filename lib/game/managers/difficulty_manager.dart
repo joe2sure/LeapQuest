@@ -1,6 +1,7 @@
+import 'package:flame/components.dart';
 import 'package:leap_quest/config/config.dart';
 
-class DifficultyManager {
+class DifficultyManager extends Component{
   double _difficultyMultiplier = 1.0;
   double _platformGap = GameConfig.initialPlatformGap;
   double _powerUpChance = GameConfig.powerUpSpawnChance;
@@ -41,5 +42,11 @@ class DifficultyManager {
     _powerUpChance = GameConfig.powerUpSpawnChance;
     _moveSpeed = GameConfig.moveSpeed;
     _enemySpawnChance = 0.03;
+  }
+
+ @override
+  void update(double dt) {
+    super.update(dt);
+    // Add any time-based difficulty scaling here if needed
   }
 }

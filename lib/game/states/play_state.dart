@@ -18,7 +18,7 @@ class PlayState extends Component with HasGameRef<MinimalGame> {
       powerUps: gameRef.powerUps,
     );
 
-    add(difficultyManager as Component);
+    add(difficultyManager);
     add(collisionManager);
   }
 

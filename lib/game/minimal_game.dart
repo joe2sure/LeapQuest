@@ -42,7 +42,7 @@ class MinimalGame extends FlameGame with TapDetector, HasCollisionDetection {
     camera.viewport = FixedResolutionViewport(resolution: Vector2(360, 640));
 
     difficultyManager = DifficultyManager();
-    add(difficultyManager as Component);
+    add(difficultyManager);
 
     player = Player(color: Colors.red);
     add(player);

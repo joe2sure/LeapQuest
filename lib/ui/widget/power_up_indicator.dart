@@ -7,10 +7,10 @@ class PowerUpIndicator extends StatelessWidget {
   final double duration;
 
   const PowerUpIndicator({
-    Key? key,
+    super.key,
     required this.powerUpType,
     required this.duration,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

@@ -4,7 +4,7 @@ import 'package:leap_quest/config/colors.dart';
 import 'package:leap_quest/providers/player_provider.dart';
 
 class ShopScreen extends StatelessWidget {
-  const ShopScreen({Key? key}) : super(key: key);
+  const ShopScreen({super.key});
 
   @override
   Widget build(BuildContext context) {

@@ -5,7 +5,7 @@ import 'package:leap_quest/core/models/acheivement.dart';
 class AchievementPopup extends StatelessWidget {
   final Achievement achievement;
 
-  const AchievementPopup({Key? key, required this.achievement}) : super(key: key);
+  const AchievementPopup({super.key, required this.achievement});
 
   @override
   Widget build(BuildContext context) {
